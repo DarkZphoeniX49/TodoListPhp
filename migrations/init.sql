@@ -14,7 +14,8 @@ CREATE TABLE `todos` (
 --
 
 --
--- Index pour la table `todos`
+-- Index pour la tabC:/xampp/php/php mvc db:migrate
+e `todos`
 --
 ALTER TABLE `todos`
   ADD PRIMARY KEY (`id`);
