@@ -4,9 +4,14 @@
             <div class="card-body">
                 <h3>Site de démonstration</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, commodi delectus eaque eos esse ex illum laboriosam laborum modi, molestias necessitatibus non provident quidem quis repellat soluta tempore, veritatis vitae.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, commodi delectus eaque eos esse ex
+                    illum laboriosam laborum modi, molestias necessitatibus non provident quidem quis repellat soluta
+                    tempore, veritatis vitae.
                 </p>
-                <div class="text-center">Page générée le <?= $date ?></div>
+
+                <div class="text-center">Page générée le <?= $date ?>
+                    <img src="https://i.ytimg.com/vi/6r5eGfbbLgk/mqdefault.jpg" alt="" />
+                </div>
             </div>
         </div>
     </div>
