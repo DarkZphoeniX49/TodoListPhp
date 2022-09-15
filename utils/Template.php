@@ -2,6 +2,7 @@
 
 namespace utils;
 
+
 class Template
 {
     static function render($filepath, $variables = array(), $withHeader = true): void

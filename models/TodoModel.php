@@ -10,15 +10,14 @@ class TodoModel extends SQL
         parent::__construct('todos', 'id');
     }
 
-    function todoNonTermine()
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM todos WHERE termine = 0;");
-        $stmt->execute();
-        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-    }
-
     function marquerCommeTermine($id){
         $stmt = $this->pdo->prepare("UPDATE todos SET termine = 1 WHERE id = ?");
         $stmt->execute([$id]);
+    }
+
+    function ajouterTodo($texte)
+    {
+        $addTodo=$this->pdo->prepare("INSERT INTO `todos` ( `texte`, `termine`) VALUES ( ?, '0'); ");
+        $addTodo->execute([$texte]);
     }
 }
