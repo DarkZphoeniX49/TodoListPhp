@@ -17,7 +17,7 @@ class Web
         
         Route::Add('/', [$main, 'home']);
         Route::Add('/about', [$main, 'about']);
-        Route::Add('/todo/conn',[$main,'login']);
+        Route::Add('/conn',[$todo,'connexion']);
         Route::Add('/todo/liste', [$todo, 'liste']);
         Route::Add('/todo/ajouter', [$todo, 'ajouter']);
         Route::Add('/todo/terminer', [$todo, 'terminer']);

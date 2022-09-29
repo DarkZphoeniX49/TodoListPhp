@@ -12,8 +12,8 @@
                 <div class="text-center">Page générée le <?= $date ?>
                     <img src="https://i.ytimg.com/vi/6r5eGfbbLgk/mqdefault.jpg" alt="" />
                     
-                    <form action='./todo/liste' method='post' >
-                        <input type='submit' class='btn btn-primary'text='todolist'/>
+                    <form action='./conn' method='post' >
+                        <input type='submit' class='btn btn-primary'text='Connexion à la todolist'/>
                     </form>
                 </div>
             </div>

@@ -42,6 +42,13 @@ class TodoModel extends SQL
         
         
     }
+
+    function checkLogin($mdp,$username){
+        $check=$this->pdo->prepare("SELECT COUNT(*) as verif FROM connexion WHERE mdp=?  AND nom=?");
+        $check->execute([$mdp,$username]);
+        $validation=$check->fetchAll();
+        if($validation) return 1;
+    }
     /*function hideTermine(){
         $todos=$this->todoModel->getAll();
         foreach($todos as $todo){
@@ -53,6 +60,6 @@ class TodoModel extends SQL
         }
     }
         */
-        function
+        
 
 }

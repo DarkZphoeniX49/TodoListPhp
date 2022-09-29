@@ -1,4 +1,4 @@
-<form action="./verification" method='post'>
+<form action="./" method='post'>
     <p>connexion</p>
     <input type="text" placeholder="identifiant" name='id'/>
     <br>

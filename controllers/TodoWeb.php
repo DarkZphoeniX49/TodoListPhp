@@ -39,6 +39,16 @@ class TodoWeb extends Web
         $this->todoModel->supprimer($id);
         $this->redirect('./liste');
     }
+
+    function connexion($username='',$password=''){
+        $result=$this->todoModel->checkLogin($password,$username);
+        if($result) {
+            $_SESSION['estconnecter']=1;
+            $this->redirect('./liste');
+        }
+        else $this->redirect('./home');
+    }
+
     function sample($id)
 {
     echo "Vous consulter l'identifiant $id";
