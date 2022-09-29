@@ -18,10 +18,10 @@ class Web
         Route::Add('/', [$main, 'home']);
         Route::Add('/about', [$main, 'about']);
         Route::Add('/login',[$main,'login']);
-        
+        Route::Add('/conn',[$todo,'connexion']);
 
         //        Exemple de limitation d'accès à une page en fonction de la SESSION.
-     if (SessionHelpers::isLogin()) {
+     if ($_SESSION['USER']) {
         Route::Add('/logout', [$main, 'home']);
         Route::Add('/todo/liste', [$todo, 'liste']);
         Route::Add('/todo/ajouter', [$todo, 'ajouter']);

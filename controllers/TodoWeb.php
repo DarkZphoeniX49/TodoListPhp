@@ -45,7 +45,7 @@ class TodoWeb extends Web
     function connexion($username='',$password=''){
         $result=$this->todoModel->checkLogin($password,$username);
         if($result) {
-            $_SESSION['estconnecter']=1;
+            $_SESSION['USER']=1;
             $this->redirect('./liste');
         }
         else $this->redirect('./home');

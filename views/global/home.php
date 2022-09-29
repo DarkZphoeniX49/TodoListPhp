@@ -12,9 +12,8 @@
                 <div class="text-center">Page générée le <?= $date ?>
                     <img src="https://i.ytimg.com/vi/6r5eGfbbLgk/mqdefault.jpg" alt="" />
                     
-                    <form action='/login' method='post' >
-                        <input type='submit' class='btn btn-primary' />
-                    </form>
+                    
+                    <a href='/login' class='btn btn-primary'> se connecter </a>
                 </div>
             </div>
         </div>
