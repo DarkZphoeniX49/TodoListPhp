@@ -16,13 +16,31 @@ class TodoWeb extends Web
 
     function liste()
     {
-        $todos = $this->todoModel->getAll(); // Récupération des TODOS présents en base.
+        $todos = $this->todoModel->getAll();// $this->todoModel->getAll(); // Récupération des TODOS présents en base.
         Template::render("views/todos/liste.php", array('todos' => $todos)); // Affichage de votre vue.
     }
 
     function ajouter($texte = "")
     {
-        $this->todoModel->ajouterTodo($texte);
+        $this->todoModel->verifAjout($texte);
         $this->redirect("./liste");
     }
+
+    function terminer($id = "")
+    {
+        if($id!="") {
+            $this->todoModel->marquerCommeTermine($id);
+
+        }
+        $this->redirect("./liste");
+
+    }
+    function suppr($id=""){
+        $this->todoModel->supprimer($id);
+        $this->redirect('./liste');
+    }
+    function sample($id)
+{
+    echo "Vous consulter l'identifiant $id";
+}
 }

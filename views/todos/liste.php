@@ -7,7 +7,6 @@
                     <input id="texte" name="texte" type="text" class="form-control" placeholder="Prendre une note…" aria-label="My new idea" aria-describedby="basic-addon1"/>
                 </div>
             </form>
-
             <!-- Liste -->
             <ul class="list-group pt-3">
                 <?php
@@ -17,10 +16,19 @@
                         <div class="d-flex">
                             <div class="flex-grow-1 align-self-center"><?= $todo['texte'] ?></div>
                             <div>
+                                <?php if(!$todo["termine"]){   ?>
                                 <a href="./terminer?id=<?= $todo['id'] ?>" class="btn btn-outline-success">
                                     <i class="bi bi-check"></i>
                                 </a>
+                                <?php } else{ ?>
+                                    <a href="./supprimer?id=<?= $todo['id'] ?>" class="btn btn-outline-danger" name='suppr'>
+                                    <i class="bi bi-trash"></i>
+                                </a>
                                 <!-- Action à ajouter pour Supprimer -->
+                                <?php 
+                                
+                                
+                            }?>
                             </div>
                         </div>
                     </li>
